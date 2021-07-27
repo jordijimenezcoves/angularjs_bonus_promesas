@@ -7,12 +7,19 @@
         <script src="js/lib/angular.min.js"></script>
         <script src="angular/app.js"></script>
         <script src="angular/controladores.js"></script>
+        <script src="angular/servicios.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
     </head>
     <body>
-        <div ng-controller="mainCtrl">
+        <div class="container" ng-controller="personasCtrl">
 
-            {{ miVar }}
-            
+            <h1>Servicios</h1>
+            <hr>
+
+            <label class="label label-primary" ng-show="personas.cargando">Cargando data...</label>
+            <pre>{{ personas | json }}</pre>
         </div>
     </body>
 </html>
